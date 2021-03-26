@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Jam 11"
+run/main_scene="res://Scenes/CatMouse.tscn"
 config/icon="res://icon.png"
 
 [rendering]
