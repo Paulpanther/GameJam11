@@ -4,8 +4,6 @@
 [ext_resource path="res://Scenes/Room2/Window.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/wall1.png" type="Texture" id=3]
 
-
-
 [node name="WindowDetail" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]

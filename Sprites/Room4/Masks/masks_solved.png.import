@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/masks_unfinished.png-0826597dad97fad8bec320584bba5ca8.stex"
+path="res://.import/masks_solved.png-d5e4ca6ce4a8af38897efdd213ba013f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Room4/Masks/masks_unfinished.png"
-dest_files=[ "res://.import/masks_unfinished.png-0826597dad97fad8bec320584bba5ca8.stex" ]
+source_file="res://Sprites/Room4/Masks/masks_solved.png"
+dest_files=[ "res://.import/masks_solved.png-d5e4ca6ce4a8af38897efdd213ba013f.stex" ]
 
 [params]
 

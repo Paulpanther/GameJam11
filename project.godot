@@ -24,6 +24,7 @@ SceneStack="*res://Scripts/Globals/scene_stack.gd"
 Items="*res://Scripts/Globals/items.gd"
 RoomHandler="*res://Scripts/Globals/room_handler.gd"
 GlobalFlowerPot="*res://Scripts/Globals/global_flower_pot.gd"
+SolvedPuzzleStates="*res://Scripts/Globals/solved_puzzle_states.gd"
 
 [display]
 
