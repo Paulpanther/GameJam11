@@ -17,26 +17,29 @@ const offset_y = 660
 const distance_hooks = 150
 
 func _ready():
-	current_mask = "AngryMask"
-	
-	for i in range(5):
-		hooks_masks[i] = {}
-	
-	
-	hooks_masks[0][0] = get_node("AngryMask")
-	hooks_masks[0][1] = get_node("SadMask")
-	hooks_masks[0][2] = get_node("HappyMask")
-	hooks_masks[0][3] = init_new_hook()
-	hooks_masks[0][4] = init_new_hook()
-	for i in range(5):
-		for j in range(1,5):
-			hooks_masks[j][i] = init_new_hook()
-	
-	
-	for i in range(5):
-		for j in range(5):
-			hooks_masks[i][j].offset = Vector2(offset_y + i * distance_hooks, offset_x + j * distance_hooks)
-			add_child(hooks_masks[i][j])
+	if SolvedPuzzleStates.mask_puzzle_solved:
+		puzzle_solved_load()
+	else:
+		current_mask = "AngryMask"
+		
+		for i in range(5):
+			hooks_masks[i] = {}
+		
+		
+		hooks_masks[0][0] = get_node("AngryMask")
+		hooks_masks[0][1] = get_node("SadMask")
+		hooks_masks[0][2] = get_node("HappyMask")
+		hooks_masks[0][3] = init_new_hook()
+		hooks_masks[0][4] = init_new_hook()
+		for i in range(5):
+			for j in range(1,5):
+				hooks_masks[j][i] = init_new_hook()
+		
+		
+		for i in range(5):
+			for j in range(5):
+				hooks_masks[i][j].offset = Vector2(offset_y + i * distance_hooks, offset_x + j * distance_hooks)
+				add_child(hooks_masks[i][j])
 
 func register_selected(node_name):
 	current_mask = node_name
@@ -59,4 +62,11 @@ func init_new_hook():
 
 func check_win_condition():
 	if(get_node("AngryMask").offset == win_coordinates[0] && get_node("SadMask").offset == win_coordinates[1] && get_node("HappyMask").offset == win_coordinates[2]):
-		print("win")
+		SolvedPuzzleStates.mask_puzzle_solved = true
+
+func puzzle_solved_load():
+	$Solved.visible = true
+	
+	$AngryMask.visible = false
+	$HappyMask.visible = false
+	$SadMask.visible = false
