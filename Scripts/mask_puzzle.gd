@@ -58,8 +58,5 @@ func init_new_hook():
 	return hook
 
 func check_win_condition():
-	print(get_node("HappyMask").offset)
-	print(get_node("AngryMask").offset)
-	print(get_node("SadMask").offset)
 	if(get_node("AngryMask").offset == win_coordinates[0] && get_node("SadMask").offset == win_coordinates[1] && get_node("HappyMask").offset == win_coordinates[2]):
 		print("win")

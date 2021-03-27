@@ -28,7 +28,6 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 func move_minute_hand(delta):
 	var target_angle = rad2deg(get_global_mouse_position().angle()) +90
-	print(target_angle)
 	var current_angle = (fmod(GlobalFlowerPot.minutes, 60.0) / 60.0) * 360
 	
 	var a = target_angle - current_angle
