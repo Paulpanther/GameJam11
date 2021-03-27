@@ -4,7 +4,10 @@ extends Node
 var selected = false
 var item = null
 
+var inventory
+
 func _ready():
+	inventory = $"../../"
 	_update_selected()
 
 func width():
@@ -14,6 +17,7 @@ func set_item(new_item):
 	item = new_item
 	if item != null:
 		var image = Image.new()
+		image.load(item.sprite)
 		var texture = ImageTexture.new()
 		texture.create_from_image(image, 0)
 		$Item.show()
@@ -25,7 +29,7 @@ func on_slot_clicked(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if item != null:
 			selected = !selected
-			_update_selected()
+			inventory.set_selected(self)
 
 func _update_selected():
 	if selected:
@@ -34,6 +38,13 @@ func _update_selected():
 	else:
 		$Selected.hide()
 		$Deselected.show()
+
+func update_selected_status():
+	if inventory.selected_slot == self:
+		selected = true
+	else:
+		selected = false
+	_update_selected()
 
 func on_slot_hover_enter():
 	if item != null:

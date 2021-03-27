@@ -4,6 +4,8 @@ extends Node
 var _proto_slot = preload("res://Scenes/Inventory/Slot.tscn")
 var inventory_width
 
+var selected_slot = null
+
 func _ready():
 	inventory_width = $Sprite.texture.get_size().x
 	add_item(Items.item1)
@@ -20,6 +22,14 @@ func remove_item(item):
 		if slot.item == item:
 			$Slots.remove_child(slot)
 	_center_slots()
+
+func get_selected_item():
+	return selected_slot.item if selected_slot != null else null
+
+func set_selected(slot):
+	selected_slot = slot
+	for slot in $Slots.get_children():
+		slot.update_selected_status()
 
 func _slots_width():
 	var width = 0
