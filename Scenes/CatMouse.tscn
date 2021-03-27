@@ -6,7 +6,7 @@
 [ext_resource path="res://Sprites/CatMouse/player.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/CatMouse/win_condition.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/CatMouse/blockade.gd" type="Script" id=6]
-[ext_resource path="res://Scenes/ExitInteractableButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/InteractableHUD.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 557.454
@@ -49,8 +49,7 @@ shape = SubResource( 2 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="Button" parent="." instance=ExtResource( 7 )]
-position = Vector2( -877.002, -460.433 )
-scale = Vector2( 0.5, 0.5 )
+[node name="InteractableHUD" parent="." instance=ExtResource( 7 )]
+position = Vector2( -953.289, -532.625 )
 [connection signal="area_entered" from="table/block/Area2D" to="player" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="table/Area2D" to="table/Area2D" method="_on_Area2D_area_exited"]
