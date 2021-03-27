@@ -1,9 +1,8 @@
 
-class Item:
+
+var sprite
+var label
 	
-	var sprite
-	var label
-	
-	func _init(_sprite, _label):
-		sprite = _sprite
-		label = _label
+func _init(_sprite, _label):
+	sprite = _sprite
+	label = _label

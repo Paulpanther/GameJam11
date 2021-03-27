@@ -5,14 +5,21 @@ var selected = false
 var item = null
 
 func _ready():
-	$Item.hide()
 	_update_selected()
+
+func width():
+	return $MouseListener.shape.extents.x * 2
 
 func set_item(new_item):
 	item = new_item
 	if item != null:
-		$Item.texture = item.sprite
+		var image = Image.new()
+		print(image.load(item.sprite))
+		print(OK)
+		var texture = ImageTexture.new()
+		texture.create_from_image(image, 0)
 		$Item.show()
+		$Item.texture = texture
 	else:
 		$Item.hide()
 
@@ -32,7 +39,9 @@ func _update_selected():
 
 func on_slot_hover_enter():
 	if item != null:
-		$"..".show_text(item.text)
+		pass
+		#$"..".show_text(item.text)
 
 func on_slot_hover_exit():
-	$"..".remove_text()
+	#$"..".remove_text()
+	pass

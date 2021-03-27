@@ -21,5 +21,5 @@ position = Vector2( 560.245, 616.877 )
 shape = SubResource( 1 )
 
 [node name="Inventory" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, -0.28363 )
+position = Vector2( 981.033, -2.47553 )
 [connection signal="input_event" from="Disk" to="." method="on_disk_clicked"]
