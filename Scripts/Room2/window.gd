@@ -23,6 +23,7 @@ func on_paper_clicked(viewport, event, shape_idx):
 	if interactable and (event is InputEventMouseButton && event.pressed):
 		if GlobalFlowerPot.window_state == "open_small":
 			GlobalFlowerPot.window_state = "open_big"
+			Inv.inventory.add_item(Items.poem_paper)
 			_update_sprites()
 
 func _update_sprites():

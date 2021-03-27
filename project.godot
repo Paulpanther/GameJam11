@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Jam 11"
-run/main_scene="res://Scenes/Room1/Room1.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 
 [autoload]
 
@@ -24,6 +24,7 @@ SceneStack="*res://Scripts/Globals/scene_stack.gd"
 Items="*res://Scripts/Globals/items.gd"
 RoomHandler="*res://Scripts/Globals/room_handler.gd"
 GlobalFlowerPot="*res://Scripts/Globals/global_flower_pot.gd"
+Inv="*res://Scripts/Globals/inv.gd"
 SolvedPuzzleStates="*res://Scripts/Globals/solved_puzzle_states.gd"
 
 [display]

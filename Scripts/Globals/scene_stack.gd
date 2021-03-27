@@ -6,7 +6,7 @@ var scene_stack = []
 var root
 
 func _ready():
-	root = get_tree().get_root()
+	root = get_tree().get_root().get_node("Main")
 
 func switch_scene(to_scene):
 	call_deferred("_switch_scene_deferred", to_scene)
@@ -20,7 +20,7 @@ func _switch_scene_deferred(to_scene):
 	var next_level_resource = load(to_scene)
 	var next_level = next_level_resource.instance()
 	
-	root.add_child(next_level)
+	root.set_detail(next_level)
 
 func exit_scene():
 	call_deferred("_exit_scene_deferred")
@@ -34,7 +34,8 @@ func _exit_scene_deferred():
 	if next.has_method(return_function_name):
 		print("hallo")
 		next.on_detail_return()
-	root.add_child(next)
+		
+	root.set_room(next)
 
 func _get_current_scene():
-	return root.get_child(root.get_child_count() - 1)
+	return root.current_view()

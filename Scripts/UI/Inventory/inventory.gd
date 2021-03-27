@@ -8,8 +8,6 @@ var selected_slot = null
 
 func _ready():
 	inventory_width = $Sprite.texture.get_size().x
-	add_item(Items.item1)
-	add_item(Items.item1)
 
 func add_item(item):
 	var slot = _proto_slot.instance()
