@@ -15,16 +15,11 @@ func _process(delta):
 		update_hands()
 	
 
-func get_rotation_hour_deg():
-	return (fmod(GlobalFlowerPot.minutes, 720.0) / 720.0) * 360.0
-	
-	
-func get_rotation_minute_deg():
-	return (fmod(GlobalFlowerPot.minutes, 60.0) / 60.0) * 360.0
+
 	
 func update_hands():
-	get_node("GFC/Hours").rotation_degrees = get_rotation_hour_deg()
-	get_node("GFC/Minutes").rotation_degrees = get_rotation_minute_deg()
+	get_node("GFC/Hours").rotation_degrees = GlobalFlowerPot.get_rotation_hour_deg()
+	get_node("GFC/Minutes").rotation_degrees = GlobalFlowerPot.get_rotation_minute_deg()
 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):

@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/Room1/clockhand_big.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Room1/clockhand_small.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/wall1.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/ExitInteractableButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/InteractableHUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/grandfather_clock_top.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -44,6 +44,6 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="Button" parent="." instance=ExtResource( 5 )]
-position = Vector2( -831.558, -412.95 )
+[node name="InteractableHUD" parent="." instance=ExtResource( 5 )]
+position = Vector2( -960, -540 )
 [connection signal="input_event" from="GFC/Minutes/Area2D" to="." method="_on_Area2D_input_event"]
