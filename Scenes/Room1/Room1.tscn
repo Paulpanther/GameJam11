@@ -15,35 +15,37 @@ script = ExtResource( 2 )
 position = Vector2( 959.591, 539.445 )
 texture = ExtResource( 1 )
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
-
 [node name="GrandfatherClock" type="Sprite" parent="."]
-position = Vector2( 639.792, 546.558 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 502.277, 543.672 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 4 )
 script = ExtResource( 7 )
 
 [node name="GFCTop" type="Area2D" parent="GrandfatherClock"]
+position = Vector2( 445.744, 20.6897 )
+scale = Vector2( 0.87, 0.87 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrandfatherClock/GFCTop"]
 position = Vector2( 0.168945, 4.47534 )
 polygon = PoolVector2Array( -938.343, -1521.53, -867.472, -1523.89, -799.702, -1642.26, -673.55, -1720.7, -496.562, -1752.54, -315.829, -1706.65, -192.887, -1592.63, -167.428, -1529.4, -94.9832, -1523.89, -90.8157, -1394.1, -200.502, -1393.17, -186.333, -624.347, -311.816, -524.148, -745.389, -526.021, -836.223, -621.538, -838.096, -1383.8, -942.042, -1392.23 )
 
 [node name="GFCBottom" type="Area2D" parent="GrandfatherClock"]
+position = Vector2( 449.982, -10.0449 )
+scale = Vector2( 0.87, 0.87 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GrandfatherClock/GFCBottom"]
 position = Vector2( -0.662842, 1.32568 )
 polygon = PoolVector2Array( -836.331, 1022, -742.324, 925.191, -319.998, 926.594, -190.915, 1014.99, -206.349, 1050.06, -209.155, 1629.54, -178.287, 1643.57, -190.915, 1741.78, -836.331, 1745.99, -857.377, 1646.37, -834.927, 1640.76, -829.315, 1058.48 )
 
 [node name="Hour" type="Sprite" parent="GrandfatherClock"]
-position = Vector2( -518.219, -1059.58 )
-scale = Vector2( 0.08, 0.08 )
+position = Vector2( -3.06274, -907.236 )
 texture = ExtResource( 5 )
-offset = Vector2( -606.087, -513.184 )
+offset = Vector2( 0, -43.285 )
 
 [node name="Minute" type="Sprite" parent="GrandfatherClock"]
-position = Vector2( -518.625, -1059.14 )
-scale = Vector2( 0.08, 0.08 )
+position = Vector2( -2.35168, -906.712 )
 texture = ExtResource( 6 )
-offset = Vector2( 416.93, -604.359 )
+offset = Vector2( 0, -79.893 )
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]
 [connection signal="input_event" from="GrandfatherClock/GFCTop" to="." method="_on_GFCTop_input_event"]

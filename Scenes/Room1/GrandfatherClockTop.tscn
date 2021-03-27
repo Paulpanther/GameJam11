@@ -8,7 +8,7 @@
 [ext_resource path="res://Scripts/Room1/grandfather_clock_top.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.56594, 14.3669 )
+extents = Vector2( 0.734784, 1.22044 )
 
 [node name="GFCRoot" type="Node2D"]
 script = ExtResource( 6 )
@@ -19,25 +19,27 @@ scale = Vector2( 1.63282, 1.78044 )
 texture = ExtResource( 4 )
 
 [node name="GFC" type="Sprite" parent="."]
+position = Vector2( -615.523, -182.23 )
+scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 1 )
 offset = Vector2( 517.644, 1059.06 )
 
 [node name="Hours" type="Sprite" parent="GFC"]
+position = Vector2( 512.936, 151.859 )
 rotation = 6.28319
-scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 3 )
-offset = Vector2( -606.907, -513.44 )
+offset = Vector2( 0, -43.285 )
 
 [node name="Minutes" type="Sprite" parent="GFC"]
+position = Vector2( 512.936, 151.859 )
 rotation = 2.28464
-scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 2 )
-offset = Vector2( 416.93, -604.359 )
+offset = Vector2( -0.198, -79.571 )
 
 [node name="Area2D" type="Area2D" parent="GFC/Minutes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GFC/Minutes/Area2D"]
-position = Vector2( 11.3766, -1023.62 )
+position = Vector2( -0.781128, -57.9149 )
 scale = Vector2( 19.981, 70.445 )
 shape = SubResource( 1 )
 

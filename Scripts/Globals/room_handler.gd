@@ -20,7 +20,7 @@ func _change_room_deferred(left):
 	var current_index = rooms.find(current.filename)
 	current.free()
 	
-	var dir = 1 if left else -1
+	var dir = -1 if left else 1
 	var next = rooms[(current_index + dir) % rooms.size()]
 	var next_level = load(next).instance()
 	root.add_child(next_level)
