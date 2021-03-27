@@ -34,7 +34,6 @@ func _exit_scene_deferred():
 	var next = scene_stack[scene_stack.size() - 1]
 	next.show()
 	root.add_child(next)
-	
 
 func _get_current_scene():
 	return root.get_child(root.get_child_count() - 1)

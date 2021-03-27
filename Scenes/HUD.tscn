@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Inventory.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/arrow.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/HUD/arrow.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 68.6767, 545.781 )
+
+[node name="HUD" type="Node2D"]
+
+[node name="Inventory" parent="." instance=ExtResource( 1 )]
+position = Vector2( 952.35, 0 )
+
+[node name="ArrowLeft" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowLeft"]
+position = Vector2( 67.959, 543.672 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="ArrowLeft"]
+position = Vector2( 77.5318, 547.508 )
+scale = Vector2( 0.130725, 0.130725 )
+texture = ExtResource( 2 )
+
+[node name="ArrowRight" type="Area2D" parent="."]
+position = Vector2( 1782.03, 0 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowRight"]
+position = Vector2( 67.959, 543.672 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="ArrowRight"]
+position = Vector2( 77.5318, 547.508 )
+scale = Vector2( -0.131, 0.131 )
+texture = ExtResource( 2 )
+[connection signal="input_event" from="ArrowLeft" to="ArrowLeft" method="on_click"]
+[connection signal="input_event" from="ArrowRight" to="ArrowRight" method="on_click"]
