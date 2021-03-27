@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-b12d81cacd41edd115dbd315254b5ad9.stex"
+path="res://.import/template_room.png-0d54293e9f62df32606bfbd82357161e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/player.png"
-dest_files=[ "res://.import/player.png-b12d81cacd41edd115dbd315254b5ad9.stex" ]
+source_file="res://Sprites/RoomSideTemplate/template_room.png"
+dest_files=[ "res://.import/template_room.png-0d54293e9f62df32606bfbd82357161e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

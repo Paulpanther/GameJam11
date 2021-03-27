@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blockade.png-c5dc72225a26a299c956a79294e072ec.stex"
+path="res://.import/table.png-95eeacf425bd4a6b6eda04a3fe11afcc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/blockade.png"
-dest_files=[ "res://.import/blockade.png-c5dc72225a26a299c956a79294e072ec.stex" ]
+source_file="res://Sprites/CatMouse/table.png"
+dest_files=[ "res://.import/table.png-95eeacf425bd4a6b6eda04a3fe11afcc.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
