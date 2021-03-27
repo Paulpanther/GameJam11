@@ -24,6 +24,7 @@ config/icon="res://icon.png"
 SceneStack="*res://Scripts/scene_stack.gd"
 Items="*res://Scripts/items.gd"
 RoomHandler="*res://Scripts/room_handler.gd"
+GlobalFlowerPot="*res://Scripts/global_flower_pot.gd"
 
 [display]
 

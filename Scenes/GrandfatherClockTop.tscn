@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Room1/Grandfather_closed.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Room1/clockhand_big.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Room1/clockhand_small.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/wall1.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/ExitInteractableButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/grandfather_clock_top.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.56594, 14.3669 )
+
+[node name="GFCRoot" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 32.5268, 53.7401 )
+scale = Vector2( 1.63282, 1.78044 )
+texture = ExtResource( 4 )
+
+[node name="GFC" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 517.644, 1059.06 )
+
+[node name="Hours" type="Sprite" parent="GFC"]
+rotation = 6.28319
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 3 )
+offset = Vector2( -606.907, -513.44 )
+
+[node name="Minutes" type="Sprite" parent="GFC"]
+rotation = 2.28464
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 2 )
+offset = Vector2( 416.93, -604.359 )
+
+[node name="Area2D" type="Area2D" parent="GFC/Minutes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GFC/Minutes/Area2D"]
+position = Vector2( 11.3766, -1023.62 )
+scale = Vector2( 19.981, 70.445 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Button" parent="." instance=ExtResource( 5 )]
+position = Vector2( -831.558, -412.95 )
+[connection signal="input_event" from="GFC/Minutes/Area2D" to="." method="_on_Area2D_input_event"]

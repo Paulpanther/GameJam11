@@ -8,7 +8,7 @@ var rooms = [
 var root
 
 func _ready():
-    root = get_tree().get_root()
+	root = get_tree().get_root()
 
 func change_room(left):
 	call_deferred("_change_room_deferred", left)

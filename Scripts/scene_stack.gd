@@ -5,7 +5,7 @@ var scene_stack = []
 var root
 
 func _ready():
-    root = get_tree().get_root()
+	root = get_tree().get_root()
 
 func switch_scene(to_scene):
 	call_deferred("_switch_scene_deferred", to_scene)
