@@ -14,8 +14,6 @@ func set_item(new_item):
 	item = new_item
 	if item != null:
 		var image = Image.new()
-		print(image.load(item.sprite))
-		print(OK)
 		var texture = ImageTexture.new()
 		texture.create_from_image(image, 0)
 		$Item.show()

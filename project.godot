@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 SceneStack="*res://Scripts/scene_stack.gd"
 Items="*res://Scripts/items.gd"
+RoomHandler="*res://Scripts/room_handler.gd"
 
 [display]
 
