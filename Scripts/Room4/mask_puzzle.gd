@@ -54,7 +54,7 @@ func move_current_mask_to(target_hook):
 func init_new_hook():
 	var hook = Sprite.new()
 	hook.set_texture(wallhook)
-	hook.set_script(load("res://Scripts/hook.gd"))
+	hook.set_script(load("res://Scripts/Room4/hook.gd"))
 	return hook
 
 func check_win_condition():
