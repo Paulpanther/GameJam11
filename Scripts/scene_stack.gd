@@ -1,5 +1,6 @@
 extends Node
 
+var return_function_name = "on_detail_return"
 
 var scene_stack = []
 var root
@@ -30,6 +31,8 @@ func _exit_scene_deferred():
 	
 	var next = scene_stack.pop_back()
 	next.show()
+	if next.has_method(return_function_name):
+		next.on_detail_return()
 	root.add_child(next)
 
 func _get_current_scene():
