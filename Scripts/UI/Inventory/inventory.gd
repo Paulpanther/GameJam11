@@ -14,6 +14,7 @@ func add_item(item):
 	slot.set_item(item)
 	$Slots.add_child(slot)
 	_center_slots()
+	$"../Message".show_text(item.found_text)
 
 func remove_item(item):
 	for slot in $Slots.get_children():
