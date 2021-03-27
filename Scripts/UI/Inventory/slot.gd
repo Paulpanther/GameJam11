@@ -24,6 +24,7 @@ func set_item(new_item):
 		$Item.texture = texture
 	else:
 		$Item.hide()
+	update_detail()
 
 func on_slot_clicked(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
@@ -46,6 +47,12 @@ func update_selected_status():
 		selected = false
 	_update_selected()
 
+func update_detail():
+	if item != null and item.detail != null:
+		$Detail.show()
+	else:
+		$Detail.hide()
+
 func on_slot_hover_enter():
 	if item != null:
 		pass
@@ -54,3 +61,8 @@ func on_slot_hover_enter():
 func on_slot_hover_exit():
 	#$"..".remove_text()
 	pass
+
+
+func on_detail_clicked(viewport, event, shape_idx):
+	if item != null and item.detail != null and (event is InputEventMouseButton && event.pressed):
+		$"../../../ItemDetail".show_for_item(item)
