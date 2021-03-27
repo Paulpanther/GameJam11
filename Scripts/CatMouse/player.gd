@@ -16,7 +16,7 @@ func _physics_process(delta):
 		var current_position = global_position
 		var next_position_direction = mouse - current_position 
 		var next_position_direction_normalized = next_position_direction.normalized()
-		var next_position = current_position + next_position_direction_normalized * delta * 300
+		var next_position = current_position + next_position_direction_normalized * delta * 320
 		global_position = next_position
 
 	
@@ -27,4 +27,6 @@ func get_angle():
 
 
 func _on_Area2D_area_entered(area):
-	global_position = start_position
+	if(area.get_name() == "PlayerArea"):
+		print(area.get_name())
+		global_position = start_position
