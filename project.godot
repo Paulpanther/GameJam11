@@ -16,15 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Jam 11"
-run/main_scene="res://Scenes/MaskPuzzle.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/Room1/Room1.tscn"
 
 [autoload]
 
-SceneStack="*res://Scripts/scene_stack.gd"
-Items="*res://Scripts/items.gd"
-RoomHandler="*res://Scripts/room_handler.gd"
-GlobalFlowerPot="*res://Scripts/global_flower_pot.gd"
+SceneStack="*res://Scripts/Globals/scene_stack.gd"
+Items="*res://Scripts/Globals/items.gd"
+RoomHandler="*res://Scripts/Globals/room_handler.gd"
+GlobalFlowerPot="*res://Scripts/Globals/global_flower_pot.gd"
 
 [display]
 
