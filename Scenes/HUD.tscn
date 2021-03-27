@@ -27,6 +27,7 @@ texture = ExtResource( 2 )
 [node name="ArrowRight" type="Area2D" parent="."]
 position = Vector2( 1782.03, 0 )
 script = ExtResource( 3 )
+left = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowRight"]
 position = Vector2( 67.959, 543.672 )

@@ -2,6 +2,7 @@ extends Node
 
 var rooms = [
 	"res://Scenes/Room1/Room1.tscn",
+	"res://Scenes/Room2/Room2.tscn",
 	"res://Scenes/RoomSideTemplate.tscn"
 ]
 
