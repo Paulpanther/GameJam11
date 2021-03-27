@@ -7,6 +7,7 @@
 extents = Vector2( 140.107, 141.617 )
 
 [node name="Button" type="Area2D"]
+scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
