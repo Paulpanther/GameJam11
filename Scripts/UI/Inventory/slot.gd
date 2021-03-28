@@ -16,12 +16,8 @@ func width():
 func set_item(new_item):
 	item = new_item
 	if item != null:
-		var image = Image.new()
-		image.load(item.sprite)
-		var texture = ImageTexture.new()
-		texture.create_from_image(image, 0)
 		$Item.show()
-		$Item.texture = texture
+		$Item.texture = load(item.sprite)
 	else:
 		$Item.hide()
 	update_detail()
