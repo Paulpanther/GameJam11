@@ -8,6 +8,7 @@ func _ready():
 	
 func on_detail_return():
 	update_mask_puzzle()
+	$Closet.on_detail_return()
 
 func update_mask_puzzle():
 	if !SolvedPuzzleStates.mask_puzzle_solved:
