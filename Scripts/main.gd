@@ -22,3 +22,6 @@ func current_view():
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		get_node("MouseClick").play()
+
+func _ready():
+	get_node("Music").play()

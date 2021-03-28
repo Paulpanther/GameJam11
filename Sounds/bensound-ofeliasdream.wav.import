@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bensound-ofeliasdream.wav-8645a14d98212e4794ad65ec2602eaf5.sample"
+
+[deps]
+
+source_file="res://Sounds/bensound-ofeliasdream.wav"
+dest_files=[ "res://.import/bensound-ofeliasdream.wav-8645a14d98212e4794ad65ec2602eaf5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
