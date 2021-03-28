@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Room3/door.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Room3/door.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/keyhole.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 78.9067, 186.69 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 19.8629 )
+
+[node name="Door" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="DoorOpen" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="DoorClosed" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="DoorTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTrigger"]
+shape = SubResource( 1 )
+
+[node name="Keyhole" type="Sprite" parent="."]
+position = Vector2( 67.931, 52.7858 )
+scale = Vector2( 0.252281, 0.252281 )
+texture = ExtResource( 3 )
+
+[node name="KeyholeTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyholeTrigger"]
+position = Vector2( 67.2628, 51.6721 )
+shape = SubResource( 2 )
+[connection signal="input_event" from="DoorTrigger" to="." method="on_click"]
+[connection signal="input_event" from="KeyholeTrigger" to="." method="on_key_click"]
