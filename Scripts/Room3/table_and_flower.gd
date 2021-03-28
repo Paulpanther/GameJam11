@@ -13,9 +13,12 @@ func on_detail_return():
 func on_flower_click(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if interactable:
-			if GlobalFlowerPot.flower_state == 0 and Inv.inventory.get_selected_item() == Items.seeds:
-				Inv.inventory.remove_item(Items.seeds)
-				GlobalFlowerPot.flower_state = 1
+			if GlobalFlowerPot.flower_state == 0:
+				if Inv.inventory.get_selected_item() == Items.seeds:
+					Inv.inventory.remove_item(Items.seeds)
+					GlobalFlowerPot.flower_state = 1
+				else:
+					Inv.message.show_text("The pot is empty")
 			elif GlobalFlowerPot.flower_state == 1 and Inv.inventory.get_selected_item() == Items.can:
 				Inv.inventory.remove_item(Items.can)
 				GlobalFlowerPot.flower_state = 2
@@ -29,7 +32,7 @@ func on_flower_click(viewport, event, shape_idx):
 func on_table_click(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if not interactable:
-			if GlobalFlowerPot.flower_state == 3:
+			if GlobalFlowerPot.flower_state == 4:
 				SceneStack.switch_scene("res://Scenes/Room3/CatMouse.tscn")
 			else:
 				SceneStack.switch_scene("res://Scenes/Room3/TableDetail.tscn")
