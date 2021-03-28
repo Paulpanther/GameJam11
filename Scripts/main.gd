@@ -1,5 +1,10 @@
 extends Node
 
+func _ready():
+	RoomHandler.init()
+	SceneStack.init()
+	Inv.init()
+	$Message.show_text("Huh?! What happened?")
 
 func set_room(to):
 	_set_view(to)

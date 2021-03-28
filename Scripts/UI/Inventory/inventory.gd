@@ -16,6 +16,12 @@ func add_item(item):
 	_center_slots()
 	$"../Message".show_text(item.found_text)
 
+func add_item_silent(item):
+	var slot = _proto_slot.instance()
+	slot.set_item(item)
+	$Slots.add_child(slot)
+	_center_slots()
+
 func remove_item(item):
 	for slot in $Slots.get_children():
 		if slot.item == item:

@@ -9,9 +9,9 @@ var rooms = [
 
 var root
 
-func _ready():
+func init():
 	root = get_tree().get_root().get_node("Main")
-	root.set_room(load(rooms[0]).instance())
+	root.set_room(load(rooms[2]).instance())
 
 func change_room(left):
 	call_deferred("_change_room_deferred", left)

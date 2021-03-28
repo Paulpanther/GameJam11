@@ -5,7 +5,7 @@ var return_function_name = "on_detail_return"
 var scene_stack = []
 var root
 
-func _ready():
+func init():
 	root = get_tree().get_root().get_node("Main")
 
 func switch_scene(to_scene):
