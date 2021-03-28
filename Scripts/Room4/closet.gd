@@ -25,8 +25,11 @@ func on_click(viewport, event, shape_idx):
 
 func on_key_click(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		if not GlobalFlowerPot.closet_open and interactable and Inv.inventory.get_selected_item() == Items.hook_shaped_key:
-			GlobalFlowerPot.closet_open = true
-			Inv.inventory.remove_item(Items.hook_shaped_key)
-			Inv.inventory.add_item(Items.can)
-			_update_state()
+		if not GlobalFlowerPot.closet_open and interactable:
+			if Inv.inventory.get_selected_item() == Items.hook_shaped_key:
+				GlobalFlowerPot.closet_open = true
+				Inv.inventory.remove_item(Items.hook_shaped_key)
+				Inv.inventory.add_item(Items.can)
+				_update_state()
+			else:
+				Inv.message.show_text("The closet is locked")
