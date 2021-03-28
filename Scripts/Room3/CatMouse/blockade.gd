@@ -12,7 +12,9 @@ func _ready():
 	
 
 func _process(delta):
-	var target_angle = get_parent().get_parent().get_node("player").get_angle() + 45
+	var target_vector = get_parent().get_parent().get_node("player").global_position
+	target_vector += Vector2(-960,-540)
+	var target_angle = rad2deg(target_vector.angle()) + 45
 	var current_angle = rad2deg(global_rotation)
 
 	

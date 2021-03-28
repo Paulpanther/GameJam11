@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blockade.png-8f0441de0873f468f7fe58251f6360cf.stex"
+path="res://.import/blockade.png-cfd4857686a496330d7a216f53a76c73.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Room3/CatMouse/blockade.png"
-dest_files=[ "res://.import/blockade.png-8f0441de0873f468f7fe58251f6360cf.stex" ]
+source_file="res://Sprites/Room3/blockade.png"
+dest_files=[ "res://.import/blockade.png-cfd4857686a496330d7a216f53a76c73.stex" ]
 
 [params]
 

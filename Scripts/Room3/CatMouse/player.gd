@@ -16,7 +16,7 @@ func _physics_process(delta):
 		var current_position = global_position
 		var next_position_direction = mouse - current_position 
 		var next_position_direction_normalized = next_position_direction.normalized()
-		var next_position = current_position + next_position_direction_normalized * delta * 320
+		var next_position = current_position + next_position_direction_normalized * delta * 320 *1.6
 		global_position = next_position
 
 	
