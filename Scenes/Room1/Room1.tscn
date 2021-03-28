@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/wall1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Room1/room1.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Room1/mirror.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Room1/Clock/Grandfather_closed.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Room1/Clock/clockhand_small.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Room1/Clock/clockhand_big.png" type="Texture" id=6]
@@ -45,4 +46,9 @@ offset = Vector2( 0, -43.285 )
 position = Vector2( -2.35168, -906.712 )
 texture = ExtResource( 6 )
 offset = Vector2( 0, -79.893 )
+
+[node name="Mirror" type="Sprite" parent="."]
+position = Vector2( 967.516, 471.76 )
+scale = Vector2( 0.484112, 0.484112 )
+texture = ExtResource( 3 )
 [connection signal="input_event" from="GrandfatherClock/GFCTop" to="." method="_on_GFCTop_input_event"]
