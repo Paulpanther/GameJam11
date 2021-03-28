@@ -31,6 +31,7 @@ func on_key_click(viewport, event, shape_idx):
 				get_tree().get_root().get_node("Main").get_node("Lock").play()
 				get_tree().get_root().get_node("Main").get_node("DoorOpen").play()
 				Inv.message.show_text("The door is open. I am free!")
+				get_parent().get_node("Outro").visible = true
 				_update_state()
 			else:
 				Inv.message.show_text("The door is locked")
