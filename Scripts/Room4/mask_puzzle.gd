@@ -63,6 +63,7 @@ func init_new_hook():
 func check_win_condition():
 	if(get_node("AngryMask").offset == win_coordinates[0] && get_node("SadMask").offset == win_coordinates[1] && get_node("HappyMask").offset == win_coordinates[2]):
 		SolvedPuzzleStates.mask_puzzle_solved = true
+		puzzle_solved_load()
 
 func puzzle_solved_load():
 	$Solved.visible = true
