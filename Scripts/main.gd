@@ -18,3 +18,7 @@ func _set_view(to):
 
 func current_view():
 	return $View.get_children()[0]
+
+func _input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		get_node("MouseClick").play()

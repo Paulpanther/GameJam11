@@ -30,6 +30,8 @@ func on_key_click(viewport, event, shape_idx):
 				GlobalFlowerPot.closet_open = true
 				Inv.inventory.remove_item(Items.hook_shaped_key)
 				Inv.inventory.add_item(Items.can)
+				get_tree().get_root().get_node("Main").get_node("DoorOpen").play()
 				_update_state()
 			else:
 				Inv.message.show_text("The closet is locked")
+				get_tree().get_root().get_node("Main").get_node("LockRattle").play()

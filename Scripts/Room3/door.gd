@@ -34,3 +34,4 @@ func on_key_click(viewport, event, shape_idx):
 				_update_state()
 			else:
 				Inv.message.show_text("The door is locked")
+				get_tree().get_root().get_node("Main").get_node("LockRattle").play()
