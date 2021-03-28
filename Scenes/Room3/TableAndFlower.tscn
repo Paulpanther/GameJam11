@@ -30,12 +30,12 @@ position = Vector2( -217.373, -458.611 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 4 )
 
-[node name="Flower2" type="Sprite" parent="."]
+[node name="Flower3" type="Sprite" parent="."]
 position = Vector2( -216.706, -459.871 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 
-[node name="Flower3" type="Sprite" parent="."]
+[node name="Flower4" type="Sprite" parent="."]
 position = Vector2( -644, 360 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 5 )
