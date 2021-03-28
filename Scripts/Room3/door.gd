@@ -13,14 +13,8 @@ func _update_state():
 	if GlobalFlowerPot.flower_state == 4:
 		show()
 	
-	$DoorClosed.hide()
-	$DoorOpen.hide()
-	$Keyhole.hide()
-	if GlobalFlowerPot.door_open:
-		$DoorOpen.show()
-	else:
-		$DoorClosed.show()
-		$Keyhole.show()
+	$DoorClosed.show()
+	$Keyhole.show()
 
 func on_click(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
