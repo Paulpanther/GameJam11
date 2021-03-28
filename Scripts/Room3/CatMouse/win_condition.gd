@@ -17,7 +17,9 @@ func _ready():
 
 
 func _on_Area2D_area_exited(area):
-	print("win")
+	if(area.get_name() == "PlayerArea"):	
+		#get_parent().get_parent().get_node("player").win()
+		print("win")
 
 func is_blockade():
 	return false
