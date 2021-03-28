@@ -1,11 +1,11 @@
 extends Node
 
-export (float) var text_speed = 60.0
+export (float) var text_speed = 600.0
 export (float) var text_end = -1000
 export (float) var text_real_end = -1700
 export (float) var modulate_speed = 400.0
 export (float) var modulate_inv_speed = 200.0
-export (float) var scale_speed = 1.5
+export (float) var scale_speed = 10.5
 
 var move = false
 

@@ -5,6 +5,7 @@ func _ready():
 	SceneStack.init()
 	Inv.init()
 	$Message.show_text("Huh?! What happened?")
+	get_node("Music").play()
 
 func set_room(to):
 	_set_view(to)
@@ -28,5 +29,3 @@ func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		get_node("MouseClick").play()
 
-func _ready():
-	get_node("Music").play()
