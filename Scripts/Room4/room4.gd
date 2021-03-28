@@ -15,4 +15,8 @@ func update_mask_puzzle():
 		$HookKey.visible = false
 	else:
 		$MaskPuzzle.texture = mask_puzzle_solved
-		$HookKey.visible = true
+		
+		if !SolvedPuzzleStates.hook_key_picked_up:
+			$HookKey.visible = true
+		else:
+			$HookKey.visible = false
