@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Game Jam 11"
+config/name="Chronos' Room"
 run/main_scene="res://Scenes/Intro/Intro.tscn"
 
 [autoload]

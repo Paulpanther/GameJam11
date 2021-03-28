@@ -7,6 +7,8 @@ export (float) var modulate_speed = 400.0
 export (float) var modulate_inv_speed = 200.0
 export (float) var scale_speed = 1.5
 
+var skip = false
+
 var move = false
 
 func _ready():
@@ -19,6 +21,9 @@ func _ready():
 	$House/Wall.hide()
 
 func _process(delta):
+	if Input.is_key_pressed(KEY_K):
+		skip = true
+	
 	$Text.rect_position.y -= text_speed * delta
 	if $Text.rect_position.y < text_end:
 		$House.modulate.a = clamp((text_end - $Text.rect_position.y) / modulate_speed, 0, 1)
@@ -27,7 +32,7 @@ func _process(delta):
 	
 	if move:
 		$House.scale += Vector2(scale_speed * delta, scale_speed * delta)
-	if $House.scale.x > 15:
+	if skip or $House.scale.x > 15:
 		call_deferred("_remove_deferred")
 
 func _remove_deferred():
