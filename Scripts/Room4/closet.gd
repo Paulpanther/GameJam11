@@ -13,15 +13,20 @@ func _update_state():
 	$ClosetOpen.hide()
 	if GlobalFlowerPot.closet_open:
 		$ClosetOpen.show()
+		$Keyhole.hide()
 	else:
 		$ClosetClosed.show()
 
 func on_click(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		if interactable:
-			if not GlobalFlowerPot.closet_open:
-				GlobalFlowerPot.closet_open = true
-				Inv.inventory.add_item(Items.can)
-				_update_state()
-		else:
+		if not interactable:
 			SceneStack.switch_scene("res://Scenes/Room4/ClosetDetail.tscn")
+
+
+func on_key_click(viewport, event, shape_idx):
+	if (event is InputEventMouseButton && event.pressed):
+		if not GlobalFlowerPot.closet_open and interactable and Inv.inventory.get_selected_item() == Items.hook_shaped_key:
+			GlobalFlowerPot.closet_open = true
+			Inv.inventory.remove_item(Items.hook_shaped_key)
+			Inv.inventory.add_item(Items.can)
+			_update_state()
