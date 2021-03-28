@@ -7,7 +7,9 @@
 [ext_resource path="res://Sprites/Room1/Clock/clockhand_small.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Room1/Clock/clockhand_big.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Room1/gfc_script_main_view.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/Room1/Drawer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Room2/Desk.tscn" type="PackedScene" id=8]
+
+
 
 [node name="Room1" type="Node2D"]
 script = ExtResource( 2 )
