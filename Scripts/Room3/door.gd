@@ -28,6 +28,8 @@ func on_key_click(viewport, event, shape_idx):
 			if Inv.inventory.get_selected_item() == Items.door_key:
 				GlobalFlowerPot.door_open = true
 				Inv.inventory.remove_item(Items.door_key)
+				get_tree().get_root().get_node("Main").get_node("Lock").play()
+				get_tree().get_root().get_node("Main").get_node("DoorOpen").play()
 				Inv.message.show_text("The door is open. I am free!")
 				_update_state()
 			else:

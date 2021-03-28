@@ -22,6 +22,7 @@ func on_click(viewport, event, shape_idx):
 			if not GlobalFlowerPot.drawer_open:
 				GlobalFlowerPot.drawer_open = true
 				Inv.inventory.add_item(Items.seeds)
+				get_tree().get_root().get_node("Main").get_node("DoorOpen").play()
 				_update_state()
 		else:
 			SceneStack.switch_scene("res://Scenes/Room1/DrawerDetail.tscn")

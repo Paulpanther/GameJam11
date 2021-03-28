@@ -12,6 +12,7 @@ func on_window_clicked(viewport, event, shape_idx):
 		if interactable:
 			if GlobalFlowerPot.window_state == "closed":
 				GlobalFlowerPot.window_state = "open_small"
+				get_tree().get_root().get_node("Main").get_node("DoorOpen").play()
 				_update_sprites()
 		else:
 			SceneStack.switch_scene("res://Scenes/Room2/WindowDetail.tscn")
