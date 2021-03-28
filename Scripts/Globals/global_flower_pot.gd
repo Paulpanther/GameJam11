@@ -20,3 +20,4 @@ var flower_state = 0
 
 var drawer_open = false
 var closet_open = false
+var door_open = false

@@ -25,3 +25,7 @@ func on_click(viewport, event, shape_idx):
 				_update_state()
 		else:
 			SceneStack.switch_scene("res://Scenes/Room1/DrawerDetail.tscn")
+
+
+func on_key_click(viewport, event, shape_idx):
+	pass # Replace with function body.
