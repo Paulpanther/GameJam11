@@ -1,9 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Sprites/wall1.png" type="Texture" id=1]
-[ext_resource path="res://Scenes/Room2/Desk.tscn" type="PackedScene" id=2]
-
-
+[ext_resource path="res://Scenes/Room1/Drawer.tscn" type="PackedScene" id=2]
 
 [node name="DrawerDetail" type="Node2D"]
 
