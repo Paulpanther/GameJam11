@@ -13,6 +13,10 @@ script = ExtResource( 3 )
 position = Vector2( 959.591, 539.445 )
 texture = ExtResource( 1 )
 
+[node name="Door" parent="." instance=ExtResource( 4 )]
+position = Vector2( 703.885, 566.782 )
+scale = Vector2( 0.65, 0.65 )
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1362.47, 750.1 )
 scale = Vector2( 0.75, 0.75 )
@@ -21,7 +25,3 @@ texture = ExtResource( 5 )
 [node name="TableAndFlower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1380.64, 842.861 )
 scale = Vector2( 0.5, 0.5 )
-
-[node name="Door" parent="." instance=ExtResource( 4 )]
-position = Vector2( 757.885, 550.297 )
-scale = Vector2( 1.7, 1.7 )

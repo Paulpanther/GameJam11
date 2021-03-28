@@ -15,11 +15,12 @@ func _update_state():
 	
 	$DoorClosed.hide()
 	$DoorOpen.hide()
+	$Keyhole.hide()
 	if GlobalFlowerPot.door_open:
 		$DoorOpen.show()
-		$Keyhole.hide()
 	else:
 		$DoorClosed.show()
+		$Keyhole.show()
 
 func on_click(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
@@ -33,7 +34,7 @@ func on_key_click(viewport, event, shape_idx):
 			if Inv.inventory.get_selected_item() == Items.door_key:
 				GlobalFlowerPot.door_open = true
 				Inv.inventory.remove_item(Items.door_key)
-				Inv.message.show_text("The door is open. You are free!")
+				Inv.message.show_text("The door is open. I am free!")
 				_update_state()
 			else:
 				Inv.message.show_text("The door is locked")

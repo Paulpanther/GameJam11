@@ -20,7 +20,8 @@ func on_click(viewport, event, shape_idx):
 			if not GlobalFlowerPot.present_open:
 				if Inv.inventory.get_selected_item() == Items.scissors:
 					GlobalFlowerPot.present_open = true
-					Inv.inventory.add_item(Items.door_keys)
+					Inv.inventory.remove_item(Items.scissors)
+					Inv.inventory.add_item(Items.door_key)
 					_update_state()
 				else:
 					Inv.message.show_text("I need something to cut it open")
