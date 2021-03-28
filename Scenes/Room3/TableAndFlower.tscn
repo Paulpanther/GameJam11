@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Room3/table_and_flower.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Room3/flower2.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Room3/table.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Room3/flower1.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Room3/flower_broken.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Room3/flower0.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 592.106
@@ -18,6 +19,11 @@ script = ExtResource( 1 )
 
 [node name="Table" type="Sprite" parent="."]
 texture = ExtResource( 3 )
+
+[node name="Flower0" type="Sprite" parent="."]
+position = Vector2( -218, -460.158 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 6 )
 
 [node name="Flower1" type="Sprite" parent="."]
 position = Vector2( -217.373, -458.611 )

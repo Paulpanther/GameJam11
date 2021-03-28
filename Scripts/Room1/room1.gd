@@ -6,3 +6,4 @@ func _on_GFCTop_input_event(viewport, event, shape_idx):
 
 func on_detail_return():
 	get_node("GrandfatherClock").on_detail_return()
+	$Drawer.on_detail_return()

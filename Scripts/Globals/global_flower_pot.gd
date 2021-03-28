@@ -11,4 +11,6 @@ func get_rotation_minute_deg():
 
 var window_state = "closed"
 
-var flower_state = 1
+var flower_state = 0
+
+var drawer_open = false
