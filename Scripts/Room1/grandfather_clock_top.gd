@@ -6,6 +6,7 @@ var minute_following = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_hands()
+	print(get_local_mouse_position())
 	pass # Replace with function body.
 
 
@@ -27,7 +28,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		minute_following = !minute_following
 
 func move_minute_hand(delta):
-	var target_angle = rad2deg(get_global_mouse_position().angle()) +90
+	var mouse_position_translated = Vector2(get_local_mouse_position().x - 960, get_local_mouse_position().y - 540)
+	var target_angle = rad2deg(mouse_position_translated.angle()) + 90
 	var current_angle = (fmod(GlobalFlowerPot.minutes, 60.0) / 60.0) * 360
 	
 	var a = target_angle - current_angle

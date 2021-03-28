@@ -13,12 +13,12 @@ extents = Vector2( 0.734784, 1.22044 )
 script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 32.5268, 53.7401 )
+position = Vector2( 973.316, 623.915 )
 scale = Vector2( 1.63282, 1.78044 )
 texture = ExtResource( 4 )
 
 [node name="GFC" type="Sprite" parent="."]
-position = Vector2( -615.523, -182.23 )
+position = Vector2( 344.477, 357.77 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 1 )
 offset = Vector2( 517.644, 1059.06 )
@@ -41,7 +41,4 @@ offset = Vector2( -0.198, -79.571 )
 position = Vector2( -0.781128, -57.9149 )
 scale = Vector2( 19.981, 70.445 )
 shape = SubResource( 1 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
 [connection signal="input_event" from="GFC/Minutes/Area2D" to="." method="_on_Area2D_input_event"]

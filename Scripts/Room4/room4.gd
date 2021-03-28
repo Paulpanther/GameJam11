@@ -12,5 +12,7 @@ func on_detail_return():
 func update_mask_puzzle():
 	if !SolvedPuzzleStates.mask_puzzle_solved:
 		$MaskPuzzle.texture = mask_puzzle_unsolved
+		$HookKey.visible = false
 	else:
 		$MaskPuzzle.texture = mask_puzzle_solved
+		$HookKey.visible = true
