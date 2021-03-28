@@ -27,6 +27,7 @@ func on_flower_click(viewport, event, shape_idx):
 					Inv.message.show_text("The flower seems to be to dry")
 			elif GlobalFlowerPot.flower_state == 3:
 				GlobalFlowerPot.flower_state = 4
+				get_tree().get_root().get_node("Main").get_node("PotSmash").play()
 				Inv.inventory.add_item(Items.scissors)
 		_update_image()
 
