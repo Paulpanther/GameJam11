@@ -29,8 +29,7 @@ func on_flower_click(viewport, event, shape_idx):
 			elif GlobalFlowerPot.flower_state == 3:
 				print("now 4")
 				GlobalFlowerPot.flower_state = 4
-				Inv.inventory.add_item(Items.door_key)
-				Inv.message.show_text("You pulled to hard and the pot fell down")
+				Inv.inventory.add_item(Items.scissors)
 		_update_image()
 
 func on_table_click(viewport, event, shape_idx):
